@@ -6,7 +6,7 @@ use Slim\Http\Response;
 
 use App\Service\RequestService;
 
-final class HomeAction
+final class HomeAction2
 {
     public function __construct()
     {

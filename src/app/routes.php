@@ -1,5 +1,6 @@
 <?php
 // Routes
-
-$app->get('/', App\Action\HomeAction::class)
-    ->setName('homepage');
+$app->group('/api', function (\Slim\App $app) {
+    $app->get('/1', App\Action\HomeAction::class);
+    $app->get('/2', App\Action\HomeAction2::class);
+})->add(App\Service\TokenAuthValidate::class);
